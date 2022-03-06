@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      $("#monthlybtn").click(function () {
+        $(".daily").css("display", "none");
+        $(".weekly").css("display", "none");
+        $(".monthly").css("display", "flex");
+
+        $("#dailybtn").css("opacity", "0.5");
+        $("#weeklybtn").css("opacity", "0.5");
+        $("#monthlybtn").css("opacity", "1");
+
+      })
+      $("#weeklybtn").click(function () {
+        $(".daily").css("display", "none");
+        $(".weekly").css("display", "flex");
+        $(".monthly").css("display", "none");
+
+        $("#dailybtn").css("opacity", "0.5");
+        $("#weeklybtn").css("opacity", "1");
+        $("#monthlybtn").css("opacity", "0.5");
+
+      })
+      $("#dailybtn").click(function () {
+        $(".daily").css("display", "flex");
+        $(".weekly").css("display", "none");
+        $(".monthly").css("display", "none");
+
+        $("#dailybtn").css("opacity", "1");
+        $("#weeklybtn").css("opacity", "0.5");
+        $("#monthlybtn").css("opacity", "0.5");
+      })
+
+    });
+  </script>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="cardCont" id="mainn">
+      <div id="main">
+        <div>
+
+          <img src="images/image-jeremy.png" alt="image Jeremy">
+        </div>
+        <div>
+          <div id="report">
+            Report for
+          </div>
+          <div class="cardMain">
+            <div>
+              Jeremy
+            </div>
+            <div>
+              Robson
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cardCont" >
+
+
+      <div class="cardBack" id="workBack">
+        <img src="./images/icon-work.svg" alt="">
+      </div>
+      <div class="card" id="work">
+
+        <div class="cardHeader">
+          Work
+          <div>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+
+        </div>
+
+        <div class="daily">
+          <div class="this">
+            5hrs
+          </div>
+          <div class="last">
+            Last Week - 7hrs
+
+          </div>
+
+
+        </div>
+
+        <div class="weekly">
+          <div class="this">
+            32hrs
+
+          </div>
+          <div class="last">
+
+            Last Week - 36hrs
+          </div>
+
+        </div>
+
+        <div class="monthly">
+          <div class="this">
+            103hrs
+
+          </div>
+          <div class="last">
+            Last Week - 128hrs
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="cardCont">
+      <div class="cardBack" id="playBack">
+        <img src="./images/icon-play.svg" alt="">
+      </div>
+      <div class="card" id="Play">
+
+        <div class="cardHeader">
+          Play
+          <div>
+
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        </div>
+        <div class="daily">
+          <div class="this">
+            1hr
+          </div>
+          <div class="last">
+            Last Week - 2hrs
+          </div>
+        </div>
+
+
+        <div class="weekly">
+          <div class="this">
+            10hrs
+          </div>
+
+          <div class="last">
+            Last Week - 8hrs
+          </div>
+        </div>
+
+
+        <div class="monthly">
+          <div class="this">
+
+            23hrs
+          </div>
+          <div class="last">
+            Last Week - 29hrs
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class="cardCont">
+      <div class="cardBack" id="studyBack">
+        <img src="./images/icon-study.svg" alt="">
+      </div>
+      <div class="card" id="Study">
+
+        <div class="cardHeader">
+          Study
+          <div>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        </div>
+        <div class="daily">
+          <div class="this">
+            0hrs
+          </div>
+          <div class="last">
+            Last Week - 1hr
+          </div>
+        </div>
+
+        <div class="weekly">
+          <div class="this">
+            4hrs
+          </div>
+          <div class="last">
+            Last Week - 7hrs
+          </div>
+        </div>
+        <div class="monthly">
+          <div class="this">
+            13hrs
+          </div>
+          <div class="last">
+            Last Week - 19hrs
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="cardCont" id="timee">
+
+      <div class="card" id="time">
+        <button id="dailybtn">Daily </button>
+        <button id="weeklybtn"> Weekly</button>
+        <button id="monthlybtn">Monthly </button>
+      </div>
+    </div>
+    <div class="cardCont ">
+      <div class="cardBack" id="exerBack">
+        <img src="./images/icon-exercise.svg" alt="">
+      </div>
+      <div class="card" id="Exercise">
+
+        <div class="cardHeader">
+          Exercise
+          <div>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        </div>
+
+        <div class="daily">
+          <div class="this">
+            1hr
+          </div>
+          <div class="last">
+            Last Week - 1hr
+          </div>
+        </div>
+
+        <div class="weekly">
+          <div class="this">
+            4hrs
+          </div>
+          <div class="last">
+            Last Week - 5hrs
+          </div>
+        </div>
+
+        <div class="monthly">
+          <div class="this">
+            11hrs
+          </div>
+          <div class="last">
+            Last Week - 18hrs
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="cardCont ">
+      <div class="cardBack" id="socialBack">
+        <img src="./images/icon-social.svg" alt="">
+      </div>
+      <div class="card" id="Social">
+        <div class="cardHeader">
+          Social
+          <div>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        </div>
+        <div class="daily">
+          <div class="this">
+            1hr
+
+          </div>
+          <div class="last">
+            Last Week - 3hrs
+
+          </div>
+        </div>
+
+        <div class="weekly">
+          <div class="this">
+            5hrs
+
+          </div>
+          <div class="last">
+            Last Week - 10hrs
+
+          </div>
+        </div>
+
+        <div class="monthly">
+          <div class="this">
+            21hrs
+
+          </div>
+          <div class="last">
+            Last Week - 23hrs
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="cardCont " id="last">
+      <div class="cardBack" id="selfBack">
+        <img src="./images/icon-self-care.svg" alt="">
+      </div>
+
+      <div class="card" id="SelfCare">
+        <div class="cardHeader">
+          Self Care
+
+          <div>
+            <img src="images/icon-ellipsis.svg" alt="ellipsis">
+          </div>
+        </div>
+
+        <div class="daily">
+          <div class="this">
+            0hrs
+          </div>
+          <div class="last">
+            Last Week - 1hr
+
+          </div>
+        </div>
+        <div class="weekly">
+          <div class="this">
+            2hrs
+          </div>
+          <div class="last">
+            Last Week - 2hrs
+
+          </div>
+        </div>
+        <div class="monthly">
+          <div class="this">
+            7hrs
+          </div>
+          <div class="last">
+            Last Week - 11hrs
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</body>
+
+</html>
